@@ -1,0 +1,25 @@
+*{
+    margin:0;
+}
+
+html,body{
+    height:100%;
+}
+
+body{
+    display:flex;
+    flex-direction: row;
+}
+
+#left{
+    width:50%;
+    height:100%;
+    background:orange;
+}
+
+#right{
+    width:50%;
+
+    height:100%;
+    background:blue;
+}
