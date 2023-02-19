@@ -1,8 +1,0 @@
-h1{
-    background:black;
-    transition:all 1s;
-}
-
-h1:hover{
-    color:white;
-}
