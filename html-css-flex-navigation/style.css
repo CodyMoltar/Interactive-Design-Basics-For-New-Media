@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    background:black;
+    color:white;
+    padding:2em 1em;
+    align-items: center;
+    /* position: sticky; */
+    height:100px;
+}
+
+#nav-items-container{
+    display:flex;
+    flex-direction: row-reverse;
+    gap:1em;
+}
+
+#nav-items-container span{
+    display:flex;
+    flex-direction: row;
+    background:white;
+    color:black;
+    padding:0.5em 1em;
+    border-radius:15px;
+}
+
+#nav-items-container span:hover{
+    /* color:white;
+    background:salmon; */
+    cursor: pointer;
+    transition:all 0.15s;
+    transform: translateY(-3px);
+}
+
+#music{
+    height:calc(100vh - 100px);
+    background:pink;
+}
+
+#about-me{
+    height:100vh;
+    background:yellow;
+}
+
