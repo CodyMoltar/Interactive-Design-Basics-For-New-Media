@@ -18,75 +18,69 @@ body{
     height:100%;
     background:black;
     display:grid;
-    border: 10px solid black;
-    gap: 10px;
-    grid-template-rows: 30fr 40fr 15fr 15fr;
     grid-template-columns: 20fr 75fr 10fr;
-    grid-template-areas: 
+    grid-template-rows: 4fr 4fr 1fr 1fr;
+    grid-template-areas:
         "top-left top-right top-right"
         "middle-left top-right top-right"
         "bottom-left bottom-middle right-middle"
         "bottom-left bottom-middle right-bottom"
     ;
+    gap:10px;
+    border:10px solid black;
 }
 
-#painting div img{
-    width:100%;
-    height:100%;
+#painting div{
+    /* width:50px;
+    height:50px; */
 }
-
 
 #top-left{
+    background:white;
     grid-area: top-left;
-    background: white;
 }
 
 #middle-left{
-    grid-area: middle-left;
     background:white;
+    grid-area: middle-left;
 }
 
 #bottom-left{
+    background:navy;
     grid-area: bottom-left;
-    background:blue;
 }
 
 #top-right{
-    grid-area: top-right;
     background:red;
+    grid-area: top-right;
+    display:flex;
+    align-items: center;
+    padding:2em;
+    justify-content: center;
 }
 
 #bottom-middle{
-    grid-area: bottom-middle;
     background:white;
+    grid-area: bottom-middle;
 }
 
 #right-middle{
-    grid-area: right-middle;
     background:white;
+    grid-area: right-middle;
 }
 
 #right-bottom{
-    grid-area: right-bottom;
     background:yellow;
+    grid-area: right-bottom;
 }
-
 
 @media screen and (max-width: 600px){
-
-    #top-right{
-        grid-area: top-right;
-        background:green;
-    }
-
     #painting{
-        grid-template-areas: 
+        grid-template-areas:
             "top-right top-right top-right"
             "top-right top-right top-right"
-            "bottom-left bottom-middle right-middle"
-            "bottom-left bottom-middle right-bottom"
+            "bottom-left top-left right-middle"
+            "bottom-left top-left right-bottom"
         ;
     }
-
 }
-
