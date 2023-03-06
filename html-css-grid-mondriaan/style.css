@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    box-sizing: 0;
+}
+
+html,body{
+    height:100%;
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#painting{
+    width:500px;
+    height:500px;
+    background:lightgray;
+}
+
