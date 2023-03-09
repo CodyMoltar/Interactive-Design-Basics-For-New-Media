@@ -1,25 +1,27 @@
 *{
     margin:0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
-html,body{
-    height:100%;
+html{
+    scroll-behavior: smooth;;
 }
 
 body{
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #painting{
+    height:100vh;
     width:100%;
-    height:100%;
     background:black;
+    border:10px solid black;
     display:grid;
-    grid-template-columns: 20fr 75fr 10fr;
-    grid-template-rows: 4fr 4fr 1fr 1fr;
+    grid-template-columns: 2fr 7fr 1fr;
+    grid-template-rows: 3fr 4fr 1.5fr 1.5fr;
     grid-template-areas:
         "top-left top-right top-right"
         "middle-left top-right top-right"
@@ -27,17 +29,19 @@ body{
         "bottom-left bottom-middle right-bottom"
     ;
     gap:10px;
-    border:10px solid black;
 }
 
 #painting div{
-    /* width:50px;
-    height:50px; */
+
 }
 
 #top-left{
     background:white;
     grid-area: top-left;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #middle-left{
@@ -46,17 +50,13 @@ body{
 }
 
 #bottom-left{
-    background:navy;
+    background:blue;
     grid-area: bottom-left;
 }
 
 #top-right{
     background:red;
     grid-area: top-right;
-    display:flex;
-    align-items: center;
-    padding:2em;
-    justify-content: center;
 }
 
 #bottom-middle{
@@ -74,13 +74,26 @@ body{
     grid-area: right-bottom;
 }
 
+.text{
+    margin:4em 0em;
+    width:100%;
+    max-width:500px;
+}
+
 @media screen and (max-width: 600px){
+
     #painting{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "top-right top-right top-right"
-            "top-right top-right top-right"
-            "bottom-left top-left right-middle"
-            "bottom-left top-left right-bottom"
+            "top-left"
+            "middle-left"
+            "bottom-left"
+            "right-middle"
+            "right-bottom"
+            "top-right"
+            "bottom-middle"
         ;
     }
+
 }
